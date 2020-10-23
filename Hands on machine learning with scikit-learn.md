@@ -26,3 +26,17 @@ There are so many different types of Machine Learning systems that it is useful 
 
 - If you tune hyperparameters using the test set, you risk overfitting the test set, and the generalization error you measure will be optimistic (you may launch a model that performs worse than you expect).
 
+# 2.ML process
+- If the data were huge, you could either split your batch learning work across multiple servers (using the MapReduce technique) or use an online learning technique.
+- Quick way to get a feel of the type of data you are dealing with is to plot a histogram for each numerical attribute. The hist() method relies on Matplotlib, which in turn relies on a user-specified graphical backend to draw on your screen. So before you can plot anything, you need to specify which backend Matplotlib should use. The simplest option is to use Jupyter’s magic command %matplotlib inline
+- When you estimate the generalization error using the test set, your estimate will be too optimistic, and you will launch a system that will not perform as well as expected. This is called data snooping bias.
+- Avoid sampling bias:
+  - **Stratified sampling**: the population is divided into homogeneous subgroups called strata, and the right number of instances are sampled from each stratum to guarantee that the test set is representative of the overall population. != Random sampling
+- The correlation coefficient only measures linear correlations (“if x goes up, then y generally goes up/down”). It may completely miss out on nonlinear relationships.
+- Scale fit to training data only. Then using them to transform the whole dataset(including training set and test set or new data).
+- Building a model on top of many other models is called Ensemble Learning, and it is often a great way to push ML algorithms even further.
+- Another way to fine-tune your system is to try to combine the models that perform best.
+
+# 3.Classification
+- Skewed datasets: when some classes are much more frequent than others.
+- Confusion matrix: The general idea is to count the number of times instances of class A are classified as class B.
