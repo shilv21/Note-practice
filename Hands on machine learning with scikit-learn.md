@@ -40,3 +40,20 @@ There are so many different types of Machine Learning systems that it is useful 
 # 3.Classification
 - Skewed datasets: when some classes are much more frequent than others.
 - Confusion matrix: The general idea is to count the number of times instances of class A are classified as class B.
+
+# 4. Training models
+- It is important to scale the date before performing Ridge Regression as it is sensetive to the scale of input features. This is true for most regularized models.
+- **Lasso Regression**: An important characteristic of LassoReg is that it tends to eliminate the weights of the least important features.
+- There are two main different things with **Lasso**: First, the Gradient get smaller as the parameters approach the global minimum, so Gradient naturally slow down, which helps convergence (as there is no bouncing around). Second, the optimal parameters get closer and closer to the origin when you increase _alpha_, but they never get eliminated entirely.
+- To avoid Gradient Descent from bouncing around the optimum at the end when using **Lasso**, you need to gradually reduce the learning rate during training (it will still bounce around the optimum, but the steps will get smaller and smaller, so it will converge).
+- **Elastic Net**: Controlling the mix ratio _r_: 
+                          * _r == 0_: Elastic Net is equivalent to Ridge.
+                          * _r == 1_: Elastic Net is equivalent to Lasso.
+- Avoid using a plain Linear model, instead having at least a little bit of regularization. In general, Elastic Net is preferred over the Lasso because Lasso may behave erractically when the number of features is greater than the number of training instances or when several feature are strongly correlated.
+- **Early stopping** is such a simple and effecient regularization technique. With Stochastic and Mini-batch Gradient Descent, the curves are not so smooth, and it may be hard to know whether you have reached the minimum or not. One solution is to stop only after the validation error has been above the minimum for some time (when you are confident that the model will not do any better), then roll back the model parameters to the point where the validation error was at a minimum.
+- ** Logistic Regression** can be generalized to support multiple classes directly without having to train and combine multiple binary classifiers. This is called Softmax or Multinomnal Logistic Reg.
+
+# 5. SVM
+- LinearSVM is faster than SVC, but it does not support kernel trick.
+- Using Polynominal or Guassian _rbf_ to deal with nonlinear problem.
+- 
