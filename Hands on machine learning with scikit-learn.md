@@ -52,8 +52,8 @@ There are so many different types of Machine Learning systems that it is useful 
 - Avoid using a plain Linear model, instead having at least a little bit of regularization. In general, Elastic Net is preferred over the Lasso because Lasso may behave erractically when the number of features is greater than the number of training instances or when several feature are strongly correlated.
 - **Early stopping** is such a simple and effecient regularization technique. With Stochastic and Mini-batch Gradient Descent, the curves are not so smooth, and it may be hard to know whether you have reached the minimum or not. One solution is to stop only after the validation error has been above the minimum for some time (when you are confident that the model will not do any better), then roll back the model parameters to the point where the validation error was at a minimum.
 - ** Logistic Regression** can be generalized to support multiple classes directly without having to train and combine multiple binary classifiers. This is called Softmax or Multinomnal Logistic Reg.
-
+- Cost fucntion of Softmax is **CrossEntropy**, which is equivalent to Logistic Regression's cost fucntion( Log loss)
 # 5. SVM
 - LinearSVM is faster than SVC, but it does not support kernel trick.
 - Using Polynominal or Guassian _rbf_ to deal with nonlinear problem.
-- 
+- Gradient Decent converges much more slowly than the methods based on QP (**Quadratic Problem**).
