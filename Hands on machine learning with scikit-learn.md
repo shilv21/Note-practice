@@ -57,3 +57,7 @@ There are so many different types of Machine Learning systems that it is useful 
 - LinearSVM is faster than SVC, but it does not support kernel trick.
 - Using Polynominal or Guassian _rbf_ to deal with nonlinear problem.
 - Gradient Decent converges much more slowly than the methods based on QP (**Quadratic Problem**).
+
+# Clustering
+- **K-Means**: It is important to scale the input features.
+- **k-Means** uses K-Means++ initialization algorithm and mini-batch training as default.
